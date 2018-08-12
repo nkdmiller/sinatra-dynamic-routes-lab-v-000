@@ -47,4 +47,9 @@ class App < Sinatra::Base
     @number2 = params[:number2]
     "#{@number1 * @number2}"
   end
+  get "/divide/:number1/:number2" do
+    @number1 = params[:number1]
+    @number2 = params[:number2]
+    "#{@number1 / @number2}"
+  end
 end
