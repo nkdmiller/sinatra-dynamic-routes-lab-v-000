@@ -15,9 +15,11 @@ class App < Sinatra::Base
   end
 
   get "/say/:number/:phrase" do
-    @number = params[:number]
+    @number = params[:number].to_i
     @phrase = params[:phrase]
-    ""
+    @number.times do
+      "#{@phrase}"
+    end
   end
   
   get "/multiply/:num1/:num2" do
