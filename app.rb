@@ -10,7 +10,7 @@ class App < Sinatra::Base
 
   # This is a sample dynamic route.
   get "/square/:number" do
-    @num = params[:number]
+    @num = params[:number].to_i
     "#{@num ** 2}"
   end
 
