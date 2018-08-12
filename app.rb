@@ -5,7 +5,7 @@ class App < Sinatra::Base
   # This is a sample static route.
   get '/reversename/:name' do
     @user_name = params[:name].reverse
-    "@user_name"
+    "#{@user_name}"
   end
 
   # This is a sample dynamic route.
