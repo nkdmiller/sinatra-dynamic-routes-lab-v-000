@@ -24,9 +24,9 @@ class App < Sinatra::Base
     "#{@phrases}"
   end
   
-  get "/multiply/:num1/:num2" do
-    @number = params[:num1].to_i
-    @number2 = params[:num2].to_i
+  get "/say/:word1/:word2/:word3/:word4/:word5" do
+    @word1 = params[:num1].to_i
+    @word2 = params[:num2].to_i
     "#{@number * @number2}"
   end
 end
