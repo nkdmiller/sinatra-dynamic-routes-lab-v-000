@@ -11,7 +11,7 @@ class App < Sinatra::Base
   # This is a sample dynamic route.
   get "/square/:number" do
     @num = params[:number]
-    "Hello #{@user_name}!"
+    "#{@num ** 2}"
   end
 
   get "/goodbye/:name" do
