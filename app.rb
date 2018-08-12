@@ -33,23 +33,23 @@ class App < Sinatra::Base
     "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}."
   end
   get "/add/:number1/:number2" do
-    @number1 = params[:number1]
-    @number2 = params[:number2]
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
     "#{@number1 + @number2}"
   end
   get "/subtract/:number1/:number2" do
-    @number1 = params[:number1]
-    @number2 = params[:number2]
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
     "#{@number1 - @number2}"
   end  
   get "/multiply/:number1/:number2" do
-    @number1 = params[:number1]
-    @number2 = params[:number2]
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
     "#{@number1 * @number2}"
   end
   get "/divide/:number1/:number2" do
-    @number1 = params[:number1]
-    @number2 = params[:number2]
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
     "#{@number1 / @number2}"
   end
 end
